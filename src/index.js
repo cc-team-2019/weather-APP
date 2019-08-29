@@ -1,18 +1,37 @@
 const axios = require('axios');
-    
-let lat, long;
+const API_KEY = '76d4597073b97b1d63fb3d8ec724ef57';
+const ROOT_URL = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${API_KEY}/`;
+
+// latittude
+let lat; 
+//longitude
+let long;
+
+
+// Geolocalization 
      if ('geolocation' in navigator) {
          console.log('geolocation available');
-         navigator.geolocation.getCurrentPosition(position => {
+         navigator.geolocation.getCurrentPosition(async position => {
              lat = (position.coords.latitude);
              long = (position.coords.longitude);
-             document.getElementById('latitude').textContent = lat.toFixed(2);
-             document.getElementById('longitude'). textContent = long.toFixed(2);
-             console.log(position);
-             const API_KEY = '54ab60394b58b2041b7d11706841f562'
-             const ROOT_URL = `https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/${API_KEY}/`;
-      
-       
+             document.getElementById('latitude').textContent = lat;
+             document.getElementById('longitude'). textContent = long;
+             console.log(lat);
+             
+
+
+             const url = `${ROOT_URL}/${lat},${long}`;
+
+             const getWeather = async url => {
+                 const response = await axios(url)
+         
+                 console.table('response.data:', response.data);
+         
+         
+         }
+         
+         getWeather(url);
+         
  });
  
      } else {
@@ -21,18 +40,3 @@ let lat, long;
 
 
 
-    
-     
-
-axios.get(`${ROOT_URL}/${lat},${long}`, {
-  params: {
-      ID: 12345
-  }
-})
-.then((response) => {
-    return response;
-    console.log(response)
-})
-.catch((error) => {
-    console.log(error);
-});
