@@ -4,9 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>My weather</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <article class="chooseCity">
+        <h1>My weather</h1>
+        <form>
+            <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
+            <span id="defaultCity"><input type="checkbox">Ustaw jako domyślne</span>
+            <span id="autolocalization"><input type="checkbox">Autolokalizacja</span>
+            <input id="showWeather" type="button" value="Pokaż pogodę"/>
+        </form>
+    </article>
+    <article class="weatherPresentation">
+        <div id="cityName">Warszawa</div>
+        <div id="datefull">Niedziela 01.09.2019 13:00</div>
+        <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto" /></div>
+        <div id="sunrise">Wschód Słońca: 05:30</div>
+        <div id="sunset">Zachód Słońca: 20:27</div>
+        <div class="temperature">30°C</div>
+        <div class="precipitation">0 mm/h</div>
+        <div class="wind">12 km/h ↗</div>
+        <div class="pressure">1013 hPa</div>
+        <div id="weatherHourTitle">Godzinowa</div>
+        <div id="weatherWeekTitle">Tygodniowa</div>
+    </article>
+    <article class="weatherHour">
+        <section>
+            <div class="hour">17:00</div>
+            <div class="date">Niedziela 01.09.2019</div>
+            <div class="temperature">30°C</div>
+            <div class="precipitation">0 mm/h</div>
+            <div class="wind">12 km/h ↗</div>
+            <div class="pressure">1013 hPa</div>
+            <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto"/></div>
+        </section>
+    </article>
+    <article class="weatherWeek">
+        <section>
+            <div class="day">Niedziela</div>
+            <div class="date">01.09.2019</div>
+            <div class="hour">13:00</div>
+            <div class="temperature">30°C</div>
+            <div class="precipitation">0 mm/h</div>
+            <div class="wind">12 km/h ↗</div>
+            <div class="pressure">1013 hPa</div>
+            <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto"/></div>
+        </section>
+    </article>
     <div class="container"></div>
     <p>
         latitude: <span id="latitude"></span>&deg;<br>
@@ -14,5 +61,6 @@
     <div class="container"></div>
     
     </p>
+    <script src="./script.js"></script>
 </body>
 </html>
