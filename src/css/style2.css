@@ -7,9 +7,7 @@ body {
 }
 .chooseCity {
     position: fixed;
-    background-image: url(../photos/star2-4167939.jpg) /*linear-gradient(rgb(204, 78, 29), rgb(153, 45, 13))*/;
-    background-size: cover;
-    background-position: bottom;
+    background-image: linear-gradient(rgb(114, 114, 182), rgb(57, 57, 207));
     width: 100%;
     height: 100vh;
     text-align: center;
@@ -19,7 +17,6 @@ body {
     font-size: 40px;
     font-family: 'Pacifico', cursive;
     margin-top: 15vh;
-    color: whitesmoke;
 }
 .chooseCity form {
     display: grid;
@@ -34,15 +31,14 @@ body {
     width: 60vw;
     text-align: center;
     border-radius: 20px;
-    background-color: whitesmoke;
-    border: 2px solid orange;
+    background-color: rgb(138, 188, 221);
+    border: 2px solid grey;
     font-size: 16px;
 }
 .chooseCity #defaultCity {
     justify-self: right;
     align-self: center;
     font-size: 15px;
-    color: whitesmoke;
 }
 .chooseCity #defaultCity input {
     height: 25px;
@@ -53,7 +49,6 @@ body {
     align-self: center;
     margin-left: 15px;
     font-size: 15px;
-    color: whitesmoke;
 }
 .chooseCity #autolocalization input {
     height: 25px;
@@ -65,9 +60,6 @@ body {
     justify-self: center;
     width: 40vw;
     border-radius: 20px;
-    color: grey;
-    background-color: whitesmoke;
-    border: 2px solid orange;
 }
 .weatherPresentation {
     position: relative;
@@ -77,10 +69,10 @@ body {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 4fr 2fr 2fr 2fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 .weatherPresentation #cityName {
-    margin-top: 5vh;
+    margin-top: 10vh;
     font-size: 60px;
     grid-column-start: 1;
     grid-column-end: 3;
@@ -88,100 +80,80 @@ body {
 }
 .weatherPresentation #datefull {
     font-size: 15px;
-    align-self: center;
+    margin-top: 2vh;
     text-align: center;
     grid-column-start: 1;
     grid-column-end: 3;
 }
-.weatherPresentation #otherCity {
-    font-size: 15px;
-    text-align: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    justify-self: center;
-    align-self: center;
-    padding: 10px;
-    width: 70vw;
-    background-color: white;
-    border-radius: 20px;
-    border: 2px solid black;
-}
-.weatherPresentation .temperature {
-    display: grid;
-    font-size: 80px;
-    grid-row-start: 4;
+.weatherPresentation .weatherIcon {
+    grid-row-start: 3;
     grid-row-end: 5;
-    grid-column-start: 1;
-    grid-column-end: 3;
+    background-color: rgba(199, 223, 230, 0.4);
     justify-self: center;
-    align-content: center;
+    align-self: center;
 }
 .weatherPresentation #sunrise {
     font-size: 15px;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    text-align: center;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    justify-self: center;
     align-self: center;
-    background-color: rgba(199, 223, 230, 0.3);
+    background-color: rgba(199, 223, 230, 0.4);
 }
 .weatherPresentation #sunset {
     font-size: 15px;
-    grid-row-start: 7;
-    grid-row-end: 8;
-    text-align: center;
-    align-self: center;
-    background-color:  rgba(199, 223, 230, 0.3);
+    grid-row-start: 6;
+    grid-row-end: 7;
+    justify-self: center;
+    align-self: flex-start;
+    background-color:  rgba(199, 223, 230, 0.4);
 }
-
+.weatherPresentation .temperature {
+    font-size: 40px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    justify-self: center;
+    align-self: flex-end;
+    background-color: rgba(199, 223, 230, 0.4);
+}
 .weatherPresentation .precipitation {
-    display: grid;
     font-size: 20px;
-    text-align: center;
-    align-content: center;
-    background-color: rgba(199, 223, 230, 0.3);
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(199, 223, 230, 0.4);
 }
 .weatherPresentation .wind {
-    display: grid;
     font-size: 20px;
-    text-align: center;
-    align-content: center;
-    background-color: rgba(199, 223, 230, 0.3);
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(199, 223, 230, 0.4);
 }
 .weatherPresentation .pressure {
-    display: grid;
     font-size: 20px;
-    text-align: center;
-    align-content: center;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    background-color:  rgba(199, 223, 230, 0.3);
+    justify-self: center;
+    align-self: center;
+    background-color:  rgba(199, 223, 230, 0.4);
 }
 .weatherPresentation #weatherHourTitle {
-    display: grid;
-    font-size: 25px;
+    font-size: 20px;
     height: 10vh;
-    grid-row-start: 8;
-    grid-row-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 8;
     background-color: blueviolet;
     border-bottom: 2px solid black;
     text-align: center;
-    align-content: center;
 }
 .weatherPresentation #weatherWeekTitle {
-    display: grid;
-    font-size: 25px;
+    font-size: 20px;
     height: 10vh;
-    grid-row-start: 8;
-    grid-row-end: 9;
+    grid-row-start: 7;
+    grid-row-end: 8;
     background-color: rgb(157, 92, 218);
     border-bottom: 2px solid black;
     text-align: center;
-    align-content: center;
 }
 .weatherHour section {
     position: relative;
-    width: 100%;
-    height: 100px;
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
@@ -191,39 +163,38 @@ body {
 .weatherHour section .hour {
     grid-row-start: 1;
     grid-row-end: 3;
-    text-align: center;
+    justify-self: flex-start;
     align-self: center;
-    font-size: 25px;
+    margin-left: 5vw;
+    font-size: 20px;
 }
 .weatherHour section .date{
     grid-row-start: 3;
     grid-row-end: 4;
-    text-align: center;
+    justify-self: flex-start;
     align-self: center;
-    font-size: 12px;
+    margin-left: 5vw;
+    font-size: 10px;
 }
 .weatherHour section .temperature {
     grid-row-start: 1;
     grid-row-end: 4;
-    text-align: center;
+    justify-self: center;
     align-self: center;
     font-size: 30px;
 }
 .weatherHour section .precipitation {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
 .weatherHour section .wind {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
 .weatherHour section .pressure {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
@@ -231,66 +202,61 @@ body {
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 4;
-    justify-self: center;
+    justify-self: flex-end;
+    margin-right: 2vw;
     align-self: center;
-}
-.weatherHour section .weatherIcon img {
-    max-height: 100px;
-    max-width: 100px;
 }
 .weatherWeek section {
     position: relative;
-    width: 100%;
-    height: 100px;
     display: none;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    background-image: linear-gradient(90deg, rgb(105, 118, 175), rgb(157, 157, 241));
+    background-image: linear-gradient(90deg,  rgb(105, 118, 175), rgb(157, 157, 241));
     border-bottom: 2px solid black;
 }
 .weatherWeek section .day {
     grid-row-start: 1;
     grid-row-end: 2;
-    text-align: center;
+    justify-self: flex-start;
     align-self: center;
-    font-size: 18px;
+    margin-left: 5vw;
+    font-size: 20px;
 }
 .weatherWeek section .date {
     grid-row-start: 2;
     grid-row-end: 3;
-    text-align: center;
+    justify-self: flex-start;
     align-self: center;
-    font-size: 14px;
+    margin-left: 5vw;
+    font-size: 20px;
 }
 .weatherWeek section .hour{
     grid-row-start: 3;
     grid-row-end: 4;
-    text-align: center;
+    justify-self: flex-start;
     align-self: center;
-    font-size: 14px;
+    margin-left: 5vw;
+    font-size: 10px;
 }
 .weatherWeek section .temperature {
     grid-row-start: 1;
     grid-row-end: 4;
-    text-align: center;
+    justify-self: center;
     align-self: center;
     font-size: 30px;
 }
 .weatherWeek section .precipitation {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
 .weatherWeek section .wind {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
 .weatherWeek section .pressure {
-    margin-left: 4vw;
-    justify-content: flex-start;
+    justify-self: center;
     align-self: center;
     font-size: 15px;
 }
@@ -298,10 +264,7 @@ body {
     grid-column-start: 4;
     grid-row-start: 1;
     grid-row-end: 4;
-    justify-self: center;
+    justify-self: flex-end;
+    margin-right: 2vw;
     align-self: center;
-}
-.weatherWeek section .weatherIcon img {
-    max-height: 100px;
-    max-width: 100px;
 }
