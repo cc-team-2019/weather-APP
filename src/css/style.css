@@ -5,6 +5,49 @@ body {
     border: 0;
     width: 100%;
 }
+
+.settingsBar{
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+.settingsBar img{
+    float: right;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+.settingsForm #changeDefaultCity, #removeDefaultCity{
+    margin: 5px;
+}
+.dropdown-content{
+    margin-left: auto;
+    margin-right: 0;
+    background-color: #f9f9f9;
+    width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    display: none;
+    text-align: center;
+    font-weight: bold;
+  }
+.informationSection{
+    border: 1px solid #000000;
+    margin-top: 30px;
+    background-color: #0673c7;
+}
+.editingSection{
+    background-color: #6495ed;
+    border: 1px solid #000000;
+}
+.settingsForm p{
+    margin: 8px 0;
+}
+.geolocalizationSection{
+    background-color: #0673c7;
+    padding: 8px 0;
+    border: 1px solid #000000;
+}
+
 .chooseCity {
     position: fixed;
   background: url(../photos/star2-4167939.jpg);
