@@ -27,7 +27,20 @@ body {
     grid-template-rows: 10vh 30px 40px;
     grid-template-columns: 1fr 1fr;
     grid-gap: 40px;
+
 }
+
+/* Element <ul> wyświetlający podpowiedzi wyszukiwania */
+.suggestions {
+    position: absolute;
+    list-style-type: none;
+}
+
+/* Kolor podświetlonych liter wyszukiwania */
+.hl {
+    background-color: aqua;
+}
+
 .chooseCity #putCity {
     grid-column-start: 1;
     grid-column-end: 3;
