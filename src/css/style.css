@@ -41,6 +41,10 @@ body {
     background-color: aqua;
 }
 
+.name {
+    text-transform: capitalize;
+}
+
 .chooseCity #putCity {
     grid-column-start: 1;
     grid-column-end: 3;
