@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +9,18 @@
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <article id="settings">
+        <div><span>Ustaw miasto domyślne</span><input id='putCity' type="text" placeholder="Podaj nazwę miasta"></div>
+        <div><span>Włącz autolokalizację</span><input id='autlocalization' type="checkbox"></div>
+        <div><span>Włącz czytanie tekstu</span><input id='readText' type="checkbox"></div>
+        <div><span>Włącz wprowadzanie głosem</span><input id='addText' type="checkbox"></div>
+        <div><input id='accept' type="button" value="Zatwierdź"/></div>
+    </article>
     <article class="chooseCity">
-        <h1>My weather</h1>
+        <h1 id="app_title">My weather</h1>
         <form>
+            <!--<textarea id="test">Tekst</textarea>-->
             <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
-            <span id="defaultCity"><input type="checkbox">Ustaw jako domyślne</span>
-            <span id="autolocalization"><input type="checkbox">Autolokalizacja</span>
             <input id="showWeather" type="button" value="Pokaż pogodę"/>
         </form>
     </article>
