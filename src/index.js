@@ -1,4 +1,5 @@
 import './css/style.css';
+import './js/search.js';
 
 const axios = require('axios');
 const API_KEY = '76d4597073b97b1d63fb3d8ec724ef57';
@@ -114,12 +115,6 @@ for (let i = 0; i < arr_days.length; i++) {
      } else {
          console.log('geolocation not available');
      }
-
-
-
-
-
-
 
 //Event Listnenery
      var button1 = document.getElementById("showWeather").addEventListener('click', buttonClick);

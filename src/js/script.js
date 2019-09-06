@@ -18,3 +18,8 @@ function button3Click(){
     document.querySelector('.weatherWeek section').style.display='grid';
     document.querySelector('.weatherHour section').style.display='none';
 }
+
+const endpoint = '../miasta.json';
+
+const prom = fetch(endpoint);
+console.log('testASDASDASD');
