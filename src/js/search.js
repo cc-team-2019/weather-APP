@@ -1,5 +1,7 @@
 const endpoint = 'https://raw.githubusercontent.com/cc-team-2019/weather-APP/master/src/miasta.json';
 const cities = [];
+let searchedLat;
+let searchedLon;
 
 fetch(endpoint)
     .then(blob => blob.json()) 
@@ -23,6 +25,9 @@ function displayMatches() {
     let clickedSearchResult = document.querySelectorAll('#button');
     clickedSearchResult.forEach(elem => {
         elem.addEventListener('click', e => {
+            const index = html.indexOf('<li id="button">' + e.currentTarget.innerHTML + '</li>')
+            searchedLat = matchArray[index].lat;
+            searchedLon = matchArray[index].lon;
             return searchInput.value = e.currentTarget.innerText
         })
     })
