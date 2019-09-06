@@ -22,10 +22,30 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader']
+        use: ['style-loader', 'css-loader'],       
+        include: path.join(__dirname, 'src')
+
+      },
+      // {
+      //   test: /\.(png|jpe?g|gif)$/i,
+      //   use: [
+      //     {
+      //       loader: 'url-loader',
+      //       options: {
+      //         limit: 8192,
+      //       },
+      //     },
+      //   ],
+      // },
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'file-loader',
+        include: path.join(__dirname, 'src')
       }
     ]
   },
+
+
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html'

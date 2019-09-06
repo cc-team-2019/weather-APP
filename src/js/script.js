@@ -18,10 +18,11 @@ function button3Click(){
     document.querySelector('.weatherWeek section').style.display='grid';
     document.querySelector('.weatherHour section').style.display='none';
 }
+
 var button4 = document.getElementById("otherCity").addEventListener('click', button4Click);
 function button4Click(){
-    document.querySelector('.weatherWeek section').style.display='none';
-    document.querySelector('.weatherHour section').style.display='none';
+    //document.querySelector('.weatherWeek section').style.display='none';
+    //document.querySelector('.weatherHour section').style.display='none';
     document.querySelector('.chooseCity').style.position='fixed';
     document.querySelector('.chooseCity').style.display= 'block';
 }

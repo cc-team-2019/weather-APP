@@ -13,8 +13,8 @@
         <h1>My weather</h1>
         <form>
             <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
-            <span id="defaultCity"><input type="checkbox"><br>Ustaw jako domyślne</span>
-            <span id="autolocalization"><input type="checkbox"><br>Autolokalizacja</span>
+            <span id="defaultCity"><input type="checkbox">Ustaw jako domyślne</span>
+            <span id="autolocalization"><input type="checkbox">Autolokalizacja</span>
             <input id="showWeather" type="button" value="Pokaż pogodę"/>
         </form>
     </article>
@@ -22,45 +22,43 @@
         <div id="cityName">Warszawa</div>
         <div id="datefull">Niedziela 01.09.2019 13:00</div>
         <div id="otherCity">Wyszukaj pogodę dla innego miasta</div>
-        <div id="sunrise">Wschód Słońca: <b>05:30</b></div>
-        <div id="sunset">Zachód Słońca: <b>20:27</b></div>
-        <div class="temperature">30°C</div>
-        <div class="precipitation">Opady<br><b>0 mm/h</b></div>
-        <div class="wind">Wiatr<br><b>12 km/h ↗</b></div></div>
-        <div class="pressure">Ciśnienie<br><b>1013 hPa</b></div>
-        <div id="weatherHourTitle">Godzinowa</div>
+        <div id="sunrise"></div>
+        <div id="sunset"></div>
+        <div class="temperature-block"><span class="temperature"></span><span class="temp">&#8451</span></div>
+        <div class="precipitation-block"><span class="precipTitle">Opady:</span><b><span class="precipitation"></span></b></div>
+        <div class="wind-block"><span class="windTitle">Prędkość wiatru:</span><b><span class="wind"></span></b></div>
+        <!-- <div class="wind-direction">kierunek wiatru</div> -->
+        <div class="pressure-block"><span class="pressureTitle">Ciśnienie:</span><b><span class="pressure"></span></b></div>
+        <div id="weatherHourTitle">Godzinowa     <div id="chart">
+            </div></div>
         <div id="weatherWeekTitle">Tygodniowa</div>
     </article>
-    <article class="weatherHour">
+    <!-- <article class="weatherHour">
         <section>
-            <div class="hour">17:00</div>
+       
+           <div class="hour">17:00</div>
             <div class="date">Niedziela 01.09.2019</div>
-            <div class="temperature">30°C</div>
-            <div class="precipitation">0 mm/h</div>
-            <div class="wind">12 km/h ↗</div>
-            <div class="pressure">1013 hPa</div>
-            <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100%" width="100%"/></div>
+            <div class="hour_temperature">30°C</div>
+            <div class="hour_precipitation">0 mm/h</div>
+            <div class="hour_wind">12 km/h ↗</div>
+            <div class="hour_pressure">1013 hPa</div>
+            <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto"/></div>
         </section>
-    </article>
+   </article>
     <article class="weatherWeek">
         <section>
             <div class="day">Niedziela</div>
             <div class="date">01.09.2019</div>
             <div class="hour">13:00</div>
             <div class="temperature">30°C</div>
-            <div class="precipitation">0 mm/h</div>
+            <div class="precipitation"></div>
             <div class="wind">12 km/h ↗</div>
             <div class="pressure">1013 hPa</div>
-            <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100%" width="100%"/></div>
-        </section>
+            <div class="weatherIcon"><img src="../photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto"/></div>
+        </section> -->
     </article>
     <div class="container"></div>
-    <p>
-        latitude: <span id="latitude"></span>&deg;<br>
-        longitude: <span id="longitude"></span>&deg;
-    <div class="container"></div>
-    
-    </p>
+ 
     <script src="./js/script.js"></script>
 </body>
 </html>

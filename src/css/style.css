@@ -7,7 +7,8 @@ body {
 }
 .chooseCity {
     position: fixed;
-    background-image: url(../photos/star2-4167939.jpg) /*linear-gradient(rgb(204, 78, 29), rgb(153, 45, 13))*/;
+    background: url(../photos/star2-4167939.jpg);
+  /*linear-gradient(rgb(204, 78, 29), rgb(153, 45, 13)); */
     background-size: cover;
     background-position: bottom;
     width: 100%;
@@ -106,15 +107,14 @@ body {
     border-radius: 20px;
     border: 2px solid black;
 }
-.weatherPresentation .temperature {
-    display: grid;
+.weatherPresentation .temperature-block {
     font-size: 80px;
     grid-row-start: 4;
     grid-row-end: 5;
     grid-column-start: 1;
     grid-column-end: 3;
     justify-self: center;
-    align-content: center;
+    align-self: center;
 }
 .weatherPresentation #sunrise {
     font-size: 15px;
@@ -133,21 +133,21 @@ body {
     background-color:  rgba(199, 223, 230, 0.3);
 }
 
-.weatherPresentation .precipitation {
+.weatherPresentation .precipitation-block {
     display: grid;
     font-size: 20px;
     text-align: center;
     align-content: center;
     background-color: rgba(199, 223, 230, 0.3);
 }
-.weatherPresentation .wind {
+.weatherPresentation .wind-block {
     display: grid;
     font-size: 20px;
     text-align: center;
     align-content: center;
     background-color: rgba(199, 223, 230, 0.3);
 }
-.weatherPresentation .pressure {
+.weatherPresentation .pressure-block {
     display: grid;
     font-size: 20px;
     text-align: center;
