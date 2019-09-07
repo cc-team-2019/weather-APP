@@ -6,28 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My weather</title>
     <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
     <article id="settings">
-        <div><span>Ustaw miasto domyślne</span><input id='putCity' type="text" placeholder="Podaj nazwę miasta"></div>
-        <div><span>Włącz autolokalizację</span><input id='autlocalization' type="checkbox"></div>
-        <div><span>Włącz czytanie tekstu</span><input id='readText' type="checkbox"></div>
-        <div><span>Włącz wprowadzanie głosem</span><input id='addText' type="checkbox"></div>
+        <div>Ustaw miasto domyślne</div>
+        <div><input id='defaultCity' type="text" placeholder="Podaj nazwę miasta"></div>
+        <div>Włącz autolokalizację</div>
+        <div><input id='autlocalization' type="checkbox"></div>
         <div><input id='accept' type="button" value="Zatwierdź"/></div>
     </article>
+    <article id="controls">
+        <div id="soundOn"></div>
+        <div id="soundOff"></div>
+        <div id="speakOn"></div>
+        <div id="speakOff"></div>
+    </article>
+    <div id="otherCity"></div>
     <article class="chooseCity">
         <h1 id="app_title">My weather</h1>
         <form>
             <!--<textarea id="test">Tekst</textarea>-->
             <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
+            <ul class="suggestions">
+            </ul>
             <input id="showWeather" type="button" value="Pokaż pogodę"/>
         </form>
     </article>
     <article class="weatherPresentation">
         <div id="cityName">Warszawa</div>
         <div id="datefull">Niedziela 01.09.2019 13:00</div>
-        <div id="otherCity">Wyszukaj pogodę dla innego miasta</div>
         <div id="sunrise"></div>
         <div id="sunset"></div>
         <div class="temperature-block"><span class="temperature"></span><span class="temp">&#8451</span></div>
@@ -64,6 +73,9 @@
         </section> -->
     </article>
     <div class="container"></div>
+    <div class="words">
+        
+    </div>
  
     <script src="./js/script.js"></script>
 </body>
