@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My weather</title>
-    <!--<link href="style.css" rel="stylesheet" type="text/css" />-->
+    <link href="./css/style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    <article id="settings">
+        <div>Ustaw miasto domyślne</div>
+        <div><input id='defaultCity' type="text" placeholder="Podaj nazwę miasta"></div>
+        <div>Włącz autolokalizację</div>
+        <div><input id='autlocalization' type="checkbox"></div>
+        <div><input id='accept' type="button" value="Zatwierdź"/></div>
+    </article>
+    <article id="controls">
+        <div id="soundOn"></div>
+        <div id="soundOff"></div>
+        <div id="speakOn"></div>
+        <div id="speakOff"></div>
+    </article>
+    <div id="otherCity"></div>
     <article class="chooseCity">
-        <h1>My weather</h1>
-        <header>
-            <div class="settingsBar" id="settingBar">
-                <span id="settingsIcon"><img src="./photos/settings.png" alt="Ustawienia"/></span>
-                <div class="dropdown-content">                
-                    <form class="settingsForm">
-                        <div class="informationSection">
-                            <p>Aktualnie domyślne miasto: <br><span id="currentDefaultCity"></span></p>
-                        </div>
-                        <div class="editingSection">
-                            <p>Zmień lub usuń domyślne miasto</p>
-                            <input id="putDefaultCity" type="text" placeholder="Podaj nazwę miasta">
-                                <ul class="suggestions">
-                                    <li>Podpowiedzi wyszukiwarki</li>
-                                </ul>
-                            <input id="changeDefaultCity" type="button" value="Zmień"/>
-                            <input id="removeDefaultCity" type="button" value="Usuń"/><br>
-                        </div>
-                        <div class="geolocalizationSection">
-                            <span><input id="autolocalization" type="checkbox">Autolokalizacja</span>
-                        </div>                    
-                    </form>
-                </div>
-            </div>
-        </header>
+        <h1 id="app_title">My weather</h1>
         <form>
+            <!--<textarea id="test">Tekst</textarea>-->
             <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
             <ul class="suggestions">
-                <li>Podpowiedzi wyszukiwarki</li>
             </ul>
             <input id="showWeather" type="button" value="Pokaż pogodę"/>
         </form>
@@ -46,14 +37,13 @@
     <article class="weatherPresentation">
         <div id="cityName">Warszawa</div>
         <div id="datefull">Niedziela 01.09.2019 13:00</div>
-        <div class="weatherIcon"><img src="./photos/slonce.png" alt="Bezchmurne niebo" height="100px" width="auto" /></div>
         <div id="sunrise"></div>
         <div id="sunset"></div>
-        <div class="temperature-block"><div class="temperature"></div><div class="temp">&#8451</div></div>
-        <div class="precipitation"></div>
-        <div class="wind"> </div>
+        <div class="temperature-block"><span class="temperature"></span><span class="temp">&#8451</span></div>
+        <div class="precipitation-block"><span class="precipTitle">Opady:</span><b><span class="precipitation"></span></b></div>
+        <div class="wind-block"><span class="windTitle">Prędkość wiatru:</span><b><span class="wind"></span></b></div>
         <!-- <div class="wind-direction">kierunek wiatru</div> -->
-        <div class="pressure"></div>
+        <div class="pressure-block"><span class="pressureTitle">Ciśnienie:</span><b><span class="pressure"></span></b></div>
         <div id="weatherHourTitle">Godzinowa     <div id="chart">
             </div></div>
         <div id="weatherWeekTitle">Tygodniowa</div>
@@ -83,10 +73,10 @@
         </section> -->
     </article>
     <div class="container"></div>
+    <div class="words">
+        
+    </div>
  
-    <!--<script src=".js//script.js"></script>-->
-
-	<script src="./js/script2.js"></script>
-	<script src="./js/isStorage.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
