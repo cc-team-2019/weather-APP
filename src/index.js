@@ -1,11 +1,8 @@
 import './css/style.css';
 import './js/search.js';
-<<<<<<< HEAD
 import './js/script.js';
 //import './js/script2.js';
 //import './js/isStorage.js';
-=======
->>>>>>> fbc97dbe80b66b83181ddc44a2e9b65948a3c8df
 
 const axios = require('axios');
 const API_KEY = '76d4597073b97b1d63fb3d8ec724ef57';
@@ -122,15 +119,12 @@ for (let i = 0; i < arr_days.length; i++) {
          console.log('geolocation not available');
      }
 
-<<<<<<< HEAD
 
 
 
 
 
 
-=======
->>>>>>> fbc97dbe80b66b83181ddc44a2e9b65948a3c8df
 //Event Listnenery
      var button1 = document.getElementById("showWeather").addEventListener('click', buttonClick);
 
@@ -154,7 +148,6 @@ for (let i = 0; i < arr_days.length; i++) {
      }
      var button4 = document.getElementById("otherCity").addEventListener('click', button4Click);
      function button4Click(){
-<<<<<<< HEAD
          //document.querySelector('.weatherWeek section').style.display='none';
          //document.querySelector('.weatherHour section').style.display='none';
          document.querySelector('.chooseCity').style.position='fixed';
@@ -195,10 +188,3 @@ for (let i = 0; i < arr_days.length; i++) {
 }
 
 
-=======
-         document.querySelector('.weatherWeek section').style.display='none';
-         document.querySelector('.weatherHour section').style.display='none';
-         document.querySelector('.chooseCity').style.position='fixed';
-         document.querySelector('.chooseCity').style.display= 'block';
-     }
->>>>>>> fbc97dbe80b66b83181ddc44a2e9b65948a3c8df
