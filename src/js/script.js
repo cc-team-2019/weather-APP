@@ -21,6 +21,7 @@ function button3Click(){
     document.querySelector('.weatherHour section').style.display='none';
 }
 
+<<<<<<< HEAD
 var button4 = document.getElementById("otherCity").addEventListener('click', button4Click);
 function button4Click(){
     //document.querySelector('.weatherWeek section').style.display='none';
@@ -232,3 +233,9 @@ function speaker() {
     document.querySelector('#putCity').value = document.querySelector('.words').textContent;
 }
 document.querySelector('#speakOn').addEventListener('click', speaker);
+=======
+const endpoint = '../miasta.json';
+
+const prom = fetch(endpoint);
+console.log('testASDASDASD');
+>>>>>>> fbc97dbe80b66b83181ddc44a2e9b65948a3c8df

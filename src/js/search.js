@@ -30,6 +30,10 @@ function displayMatches() {
             return searchInput.value = e.currentTarget.innerText
         })
     })
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> fbc97dbe80b66b83181ddc44a2e9b65948a3c8df
 }
 
 const searchInput = document.getElementById('putCity');
