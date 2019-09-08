@@ -1,6 +1,6 @@
 import './css/style.css';
 import './js/search.js';
-import './js/script.js';
+import './js/voice.js';
 //import './js/script2.js';
 //import './js/isStorage.js';
 
@@ -131,6 +131,8 @@ for (let i = 0; i < arr_days.length; i++) {
      function buttonClick(){
          document.querySelector('.chooseCity').style.display= 'none';
          document.querySelector('.weatherPresentation').style.position= 'fixed';
+         document.getElementById('otherCity').style.display='block';
+         document.getElementById('settings').style.display='grid';
      }
      
      var button2 = document.getElementById("weatherHourTitle").addEventListener('click', button2Click);
@@ -152,6 +154,7 @@ for (let i = 0; i < arr_days.length; i++) {
          //document.querySelector('.weatherHour section').style.display='none';
          document.querySelector('.chooseCity').style.position='fixed';
          document.querySelector('.chooseCity').style.display= 'block';
+         document.getElementById('otherCity').style.display='none';
      }
 
      var button5 = document.getElementById("settings").addEventListener('click', button5Click);
