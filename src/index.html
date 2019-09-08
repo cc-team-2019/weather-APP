@@ -11,13 +11,35 @@
 <body>
     <article class="chooseCity">
         <h1>My weather</h1>
+        <header>
+            <div class="settingsBar" id="settingBar">
+                <span id="settingsIcon"><img src="./photos/settings.png" alt="Ustawienia"/></span>
+                <div class="dropdown-content">                
+                    <form class="settingsForm">
+                        <div class="informationSection">
+                            <p>Aktualnie domyślne miasto: <br><span id="currentDefaultCity"></span></p>
+                        </div>
+                        <div class="editingSection">
+                            <p>Zmień lub usuń domyślne miasto</p>
+                            <input id="putDefaultCity" type="text" placeholder="Podaj nazwę miasta">
+                                <ul class="suggestions">
+                                    <li>Podpowiedzi wyszukiwarki</li>
+                                </ul>
+                            <input id="changeDefaultCity" type="button" value="Zmień"/>
+                            <input id="removeDefaultCity" type="button" value="Usuń"/><br>
+                        </div>
+                        <div class="geolocalizationSection">
+                            <span><input id="autolocalization" type="checkbox">Autolokalizacja</span>
+                        </div>                    
+                    </form>
+                </div>
+            </div>
+        </header>
         <form>
             <input id="putCity" type="text" placeholder="Podaj nazwę miasta">
             <ul class="suggestions">
                 <li>Podpowiedzi wyszukiwarki</li>
             </ul>
-            <span id="defaultCity"><input type="checkbox">Ustaw jako domyślne</span>
-            <span id="autolocalization"><input type="checkbox">Autolokalizacja</span>
             <input id="showWeather" type="button" value="Pokaż pogodę"/>
         </form>
     </article>
@@ -63,5 +85,8 @@
     <div class="container"></div>
  
     <!--<script src=".js//script.js"></script>-->
+
+	<script src="./js/script2.js"></script>
+	<script src="./js/isStorage.js"></script>
 </body>
 </html>
