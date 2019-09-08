@@ -176,7 +176,7 @@ body {
     border: 2px solid orange;
     font-size: 0.8em;
 }
-.chooseCity .suggestions {
+.chooseCity .suggestions, .suggestionsDef {
     display: none;
     grid-column-start: 1;
     grid-column-end: 3;

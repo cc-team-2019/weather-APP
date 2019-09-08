@@ -150,6 +150,41 @@ document.getElementById('putCity').addEventListener('keyup', suggestList);
 document.querySelector('.suggestions').addEventListener('click', suggestList);
 
 
+function suggestList2() {
+    if (document.querySelector('#putDefaultCity').value=="") {
+        document.querySelector('.suggestionsDef').style.display='none';
+    } else if (document.querySelector('#putDefaultCity').value===document.querySelector('.suggestionsDef').textContent) {
+        document.querySelector('.suggestionsDef').style.display='none';
+    } else if (document.querySelector('.suggestionsDef').textContent=="") {
+        document.querySelector('.suggestionsDef').style.display='none';
+    } else {
+        arr = document.querySelector('.suggestionsDef').children;
+        for (let i = 0; i < document.querySelector('.suggestionsDef').children.length; i++) {
+            if (document.querySelector('#putDefaultCity').value===arr[i].textContent) {
+                document.querySelector('.suggestionsDef').style.display='none';
+                break;
+            } else {
+                document.querySelector('.suggestionsDef').style.display='block';
+            }
+        }
+    }
+    let liNumber = document.querySelector('.suggestionsDef').children.length;
+    if (liNumber == 1) {
+        document.querySelector('.suggestionsDef').style.height='8vh';
+    } else if (liNumber == 2) {
+        document.querySelector('.suggestionsDef').style.height='16vh';
+    } else if (liNumber == 3) {
+        document.querySelector('.suggestionsDef').style.height='24vh';
+    } else if (liNumber == 4) {
+        document.querySelector('.suggestionsDef').style.height='32vh';
+    } else if (liNumber == 5) {
+        document.querySelector('.suggestionsDef').style.height='40vh';
+    } else
+        document.querySelector('.suggestionsDef').style.height='46vh';
+}
+document.getElementById('putDefaultCity').addEventListener('keyup', suggestList2);
+document.querySelector('.suggestionsDef').addEventListener('click', suggestList2);
+
 
 value = false;
 function speakerControlOn() {
