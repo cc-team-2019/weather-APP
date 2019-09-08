@@ -23,16 +23,18 @@ function displayMatches() {
     })
     suggestions.innerHTML = html.join('')
     let clickedSearchResult = document.querySelectorAll('#button');
-    clickedSearchResult.forEach(elem => {
+    clickedSearchResult.forEach((elem, index) => {
         elem.addEventListener('click', e => {
-            const index = html.indexOf('<li id="button">' + e.currentTarget.innerHTML + '</li>')
             searchedLat = matchArray[index].lat;
             searchedLon = matchArray[index].lon;
             return searchInput.value = e.currentTarget.innerText
         })
     })
- 
 }
+
+export {
+    searchedLat, searchedLon
+};
 
 const searchInput = document.getElementById('putCity');
 const suggestions = document.querySelector('.suggestions');
