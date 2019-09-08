@@ -58,7 +58,7 @@ const endpoint = 'https://raw.githubusercontent.com/cc-team-2019/weather-APP/mas
 const cities = [];
 // let searchedLat;
 // let searchedLon;
-
+//test commit
 fetch(endpoint)
     .then(blob => blob.json()) 
     .then(data => cities.unshift(...data));
