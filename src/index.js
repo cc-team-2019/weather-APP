@@ -150,7 +150,9 @@ for (let i = 0; i < arr_days.length; i++) {
                const windSpeed = curr.windSpeed;
               const sunriseTimeStamp = daily.data[0].sunriseTime;
                const sunsetTimeStamp = daily.data[0].sunsetTime;
-               const sunriseTime = new Date((sunriseTimeStamp)*1000);             
+               const sunriseTime = new Date((sunriseTimeStamp)*1000);      
+               const sunsetTime = new Date((sunsetTimeStamp)*1000);             
+       
    console.log(sunriseTime);
 /// Implementacja DOM
                document.querySelector('.temperature').textContent = ((temperature-32) / 1.8).toFixed(1);
