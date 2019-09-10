@@ -1,10 +1,10 @@
-import './css/style.css';
+//import './css/style.css';
 import './js/search.js';
-import './js/searchDef.js';
+//import './js/searchDef.js';
 //import './js/voice.js';
 import './js/script2.js';
-import './js/isStorage.js';
-import Chart from 'chart.js';
+//import './js/isStorage.js';
+
 
 
 
@@ -19,12 +19,23 @@ let long;
 
 
 
+ 
+    
 
 
 
 
 
 
+
+
+
+
+
+
+//Event Listnenery
+     var button1 = document.getElementById("showWeather").addEventListener('click', function () {
+         
 
 //Jeśli wybrana geolokalizacja
 if ((typeof(Storage) !== "undefined")&&(localStorage.getItem("autolocalization") !== null))
@@ -137,46 +148,101 @@ const sunsetTime = convertTime(sunsetTimeStamp);
 
 
     });
+} else if ((typeof(Storage) !== "undefined")&&(localStorage.getItem("city") !== null))
+{
+    
+    const url = `${ROOT_URL}/${lat},${long}`;
+
+    const getWeather = async url => {
+       const response = await axios(url);
+       const curr = response.data.currently;
+       const daily = response.data.daily;
+       const temperature = curr.temperature;
+   
+
+
+//prognoza 24godzinna do wykresu
+
+           const arr_hours = response.data.hourly.data.slice(0, 24);
+
+       for (let i = 0; i < arr_hours.length; i++) {
+           const temperature_24h = arr_hours[i].temperature;
+          
+           console.log(((temperature_24h -32) / 1.8).toFixed(1));
+       }
+
+           
+       for (let i = 0; i < arr_hours.length; i++) {
+           const precipIntensity_24h = arr_hours[i].precipIntensity;
+          
+           console.log(precipIntensity_24h.toFixed(1) + " mm/h ");
+       }
+       for (let i = 0; i < arr_hours.length; i++) {
+           const pressure_24h = arr_hours[i].pressure;
+          
+           console.log(pressure_24h + ' hPa');
+       }
+
+
+//prognoza tygodniowa
+const arr_days = response.data.daily.data.slice(0, 7);
+
+for (let i = 0; i < arr_days.length; i++) {
+const temperature_week = arr_days[i].temperatureHigh;
+
+console.log(((temperature_week -32) / 1.8).toFixed(1));
+}
+
+for (let i = 0; i < arr_days.length; i++) {
+const precipIntensity_week = arr_days[i].precipIntensity;
+
+console.log(precipIntensity_week.toFixed(1) + " mm/h ");
+}
 
 
 
+for (let i = 0; i < arr_days.length; i++) {
+const pressure_week = arr_days[i].pressure;
+
+console.log(pressure_week + ' hPa');
+}
+//  const arr_week = response.data.hourly.data;
+//  const arr_day = arr_hour.slice(0, 24);
+
+   
+       
  
+//zmienne do zaimplementowania w DOM            
+       const currTime = new Date;
+       const precipIntensity = curr.precipIntensity;
+       const pressure = curr.pressure;
+       const windSpeed = curr.windSpeed;
+      const sunriseTime = daily.data[0].sunriseTime;
+       const sunsetTime = daily.data[0].sunsetTime;
+
+
+
+/// Implementacja DOM
+       document.querySelector('.temperature').textContent = ((temperature-32) / 1.8).toFixed(1);
+       document.querySelector('#datefull').textContent = currTime;
+       document.querySelector('.pressure').textContent = pressure + ' hPa';
+       document.querySelector('.precipitation').textContent = precipIntensity.toFixed(1) + " mm/h ";  
+       document.querySelector('.wind').textContent = windSpeed.toFixed(1) + " m/s ";
+       document.querySelector('#sunrise').textContent = 'Wschód słońca: ' + sunriseTime;
+       document.querySelector('#sunset').textContent = 'Zachód słońca: ' + sunsetTime;
+
+
 
 }
 
 
-// const xlabels = [];
- 
-    
-// async function charDay () {
-//     await getWeather();
-//     const ctx = document.getElementById('dayChart').getContext('2d');
-  
-// const myChart = new Chart(ctx, {
-    
-// type: 'bar',
-// data: {
-//     labels: xlabels,
-//     datasets: [{
-//         label: 'temperature',
-//         data: ["22"],
-//         backgroundColor: [ 'rgba(255, 99, 132, 1)',],
-//         borderColor: ['rgba(255, 99, 132, 1)',],
-//         borderWidth: 1
-        
-//     }]
-// },
-// options: {
-// responsive: true,
-// maintainAspectRatio: false
-// }
-// });
-// }
 
+///wywołanie funkcji
+getWeather(url);
 
+}
 
-//Event Listnenery
-     var button1 = document.getElementById("showWeather").addEventListener('click', buttonClick);
+     });
 
      function buttonClick(){
          document.querySelector('.chooseCity').style.display= 'none';
